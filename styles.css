@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+  }
+  
+  .message {
+    font-size: 1.30rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .confetti-button {
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .confetti-button:hover {
+    background: #ff4a3d;
+  }
+  
+  .balloons {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 150px;
+  }
+  
+  .balloon {
+    width: 80px;
+    height: 100px;
+    background: #ff6f61;
+    border-radius: 50%;
+    position: absolute;
+    animation: float 6s infinite ease-in-out;
+  }
+  
+  .balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .balloon:nth-child(2) { left: 40%; animation-delay: 2s; }
+  .balloon:nth-child(3) { left: 70%; animation-delay: 4s; }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* New Page Styles */
+  .wishes-container {
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+
+
+  }
+  
+  .wishes-title {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+  }
+  
+  .wishes {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .wish {
+    margin: 10px 0;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  .confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('https://i.imgur.com/8kQ5ZQy.png') repeat;
+    animation: confetti-fall 10s linear infinite;
+  }
+  
+  @keyframes confetti-fall {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+
